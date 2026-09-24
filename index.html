@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ResearchMate | RAG Engine</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div class="hero-inner">
+          <svg class="logo" width="44" height="44" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="5" fill="url(#g)"/><path d="m7 9 5 3 5-3M7 14l5 3 5-3" stroke="white" stroke-width="1.6" stroke-linecap="round"/><defs><linearGradient id="g" x1="3" y1="3" x2="21" y2="21"><stop stop-color="#9d62ff"/><stop offset="1" stop-color="#00c9e9"/></linearGradient></defs></svg>
+          <h1>ResearchMate</h1><span class="model-badge">RAG ENGINE</span>
+          <div class="supported"><span>Supported:</span><b>PDF</b><b>DOCX</b><b>TXT</b></div>
+          <div class="index-status"><i></i>Knowledge base ready</div>
+        </div>
+      </header>
+      <main class="container">
+        <section class="welcome" id="welcomePanel">
+          <div class="engine-icon">◇</div><p class="eyebrow">DOCUMENT INTELLIGENCE</p>
+          <h2>ResearchMate RAG Engine</h2>
+          <p>Upload technical documentation, reports, or notes to query grounded answers with direct citations.</p>
+          <div class="suggestions" aria-label="Example questions">
+            <button class="suggestion" type="button">🚀 Explain the main workflow</button>
+            <button class="suggestion" type="button">🛡️ Review key risks and checks</button>
+            <button class="suggestion" type="button">📋 Summarize the key requirements</button>
+          </div>
+        </section>
+        <section class="conversation" aria-labelledby="conversation-title">
+          <div class="conversation-top"><h2 id="conversation-title">Conversation</h2><button id="clearChat" class="btn secondary" type="button">Clear chat</button></div>
+          <div id="answerArea" class="answer-box" aria-live="polite"></div>
+        </section>
+        <section class="workspace">
+          <form id="uploadForm" class="upload-area" action="#">
+            <label for="fileInput" class="dropzone" id="dropzone"><input type="file" id="fileInput" name="file" /><span class="upload-icon">↥</span><strong>Drop files here or click to index</strong><span>PDF, DOCX, TXT</span></label>
+            <div class="upload-row"><button class="btn primary" type="submit">Index document</button><div id="uploadStatus" class="muted small" role="status"></div></div>
+          </form>
+          <form id="askForm" class="ask-form"><textarea id="question" rows="2" placeholder="Ask a question about your documents... (Enter to send)"></textarea><button class="btn accent" type="submit" aria-label="Ask question">→</button><div id="answerStatus" class="muted small" role="status"></div></form>
+        </section>
+        <footer class="muted">Grounded responses include the source documents and chunks used.</footer>
+      </main>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>

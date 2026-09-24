@@ -1,0 +1,16 @@
+langchain
+langchain-community
+langchain-openai
+langchain-text-splitters
+faiss-cpu
+openai
+tiktoken
+python-dotenv
+pypdf
+python-docx
+anthropic
+anthropic
+requests
+serpapi
+uvicorn
+fastapi
